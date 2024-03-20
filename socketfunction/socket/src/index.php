@@ -45,7 +45,7 @@ body {
 	padding-right: 50px;
 }
 .navbar .navbar-brand b {
-	color: #33cabb;		
+	color: #9ec0fe;		
 }
 .navbar .form-inline {
 	display: inline-block;
@@ -59,7 +59,7 @@ body {
 }	
 .search-box input {
 	padding-right: 35px;
-	border-color: #dfe3e8;
+	border-color: #9ec0fe;
 	border-radius: 4px !important;
 	box-shadow: none
 }
@@ -74,7 +74,7 @@ body {
 	height: 100%;
 }
 .search-box i {
-	color: #a0a5b1;
+	color: #9ec0fe;
 	font-size: 19px;
 }
 .navbar .sign-up-btn {
@@ -85,7 +85,7 @@ body {
 	color: #999;
 	font-weight: normal;
 	border-radius: 1px;
-	border-color: #e5e5e5;
+	border-color: #9ec0fe;
 	box-shadow: 0 2px 8px rgba(0,0,0,.05);
 }
 .navbar a, .navbar a:active {
@@ -105,7 +105,7 @@ body {
 	font-size: 14px;
 }
 .navbar .action-form a {		
-	color: #33cabb;
+	color: #9ec0fe;
 	padding: 0 !important;
 	font-size: 14px;
 }
@@ -116,12 +116,12 @@ body {
 }
 .navbar .btn-primary, .navbar .btn-primary:active {
 	color: #fff;
-	background: #33cabb !important;
+	background: #9ec0fe !important;
 	border: none;
 }	
 .navbar .btn-primary:hover, .navbar .btn-primary:focus {		
 	color: #fff;
-	background: #31bfb1 !important;
+	background: #5E7398 !important;
 }
 .navbar .social-btn .btn, .navbar .social-btn .btn:hover {
 	color: #fff;
@@ -135,24 +135,7 @@ body {
 	width: 47%;
 	text-decoration: none;
 }
-.navbar .social-btn .facebook-btn {
-	background: #507cc0;
-}
-.navbar .social-btn .facebook-btn:hover {
-	background: #4676bd;
-}
-.navbar .social-btn .twitter-btn {
-	background: #64ccf1;
-}
-.navbar .social-btn .twitter-btn:hover {
-	background: #4ec7ef;
-}
-.navbar .social-btn .btn i {
-	margin-right: 5px;
-	font-size: 16px;
-	position: relative;
-	top: 2px;
-}
+
 .or-seperator {
 	margin-top: 32px;
 	text-align: center;
@@ -214,14 +197,14 @@ body {
     padding: 15px 30px;
 	margin: 10px;
     font-size: 18px;
-    background-color: #33cabb;
+    background-color: #9ec0fe;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 .large-box button:hover  {
-    background-color: #31bfb1;
+    background-color: ##9ec0fe;
 	animation: zoom-in-zoom-out 1s ease infinite;
 }
 @keyframes zoom-in-zoom-out {
@@ -235,6 +218,30 @@ body {
     transform: scale(1, 1);
   }
 }
+.lamp {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border-radius: 50%;
+	border: 1px solid black;
+    transition: background-color 0.5s ease;
+  }
+  .lamp-on {
+    background-color: #c70e0e;
+  }
+
+  .lamp-status-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+  .lamp-status {
+    background-color: #EBF2FE;
+    border: 1px solid #ced4da;
+    padding: 20px;
+    border-radius: 5px;
+  }
 
 </style>
 
@@ -279,12 +286,6 @@ body {
 				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Login</a>
                 <div class="dropdown-menu action-form">
 					<form action="/examples/actions/confirmation.php" method="post">
-						<p class="hint-text">Sign in with your social media account</p>
-						<div class="form-group social-btn clearfix">
-							<a href="#" class="btn btn-secondary facebook-btn float-left"><i class="fa fa-facebook"></i> Facebook</a>
-							<a href="#" class="btn btn-secondary twitter-btn float-right"><i class="fa fa-twitter"></i> Twitter</a>
-						</div>
-						<div class="or-seperator"><b>or</b></div>
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Username" required="required">
 						</div>
@@ -292,9 +293,6 @@ body {
 							<input type="password" class="form-control" placeholder="Password" required="required">
 						</div>
 						<input type="submit" class="btn btn-primary btn-block" value="Login">
-						<div class="text-center mt-2">
-							<a href="#">Forgot Your password?</a>
-						</div>
 					</form>
                 </div>
 			</div>
@@ -312,9 +310,6 @@ body {
 						<div class="form-group">
 							<input type="password" class="form-control" placeholder="Confirm Password" required="required">
 						</div>
-						<div class="form-group">
-							<label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms &amp; Conditions</a></label>
-						</div>
 						<input type="submit" class="btn btn-primary btn-block" value="Sign up">
 					</form>
 				</div>
@@ -323,6 +318,14 @@ body {
 	</div>
 </nav>
 
+<br>
+
+<div class="d-flex justify-content-center">
+  <div style="border: 2px solid #9ec0fe; padding: 5px;">
+    <img src="ledcubelogo.png" alt="Logo" class="img-fluid" style="max-width: 400px;">
+  </div>
+</div>
+
 
 
 
@@ -330,7 +333,7 @@ body {
     <div class="row">
         <div class="col-lg-4">
             <div class="large-box">
-                <button id="tärning">Tärning</button>
+                <button id="3">Tärning</button>
             </div>
         </div>
         <div class="col-lg-4">
@@ -341,13 +344,36 @@ body {
         </div>
         <div class="col-lg-4">
             <div class="large-box">
-                <button>Ljusshow</button>
+                <button id="4">Ljusshow</button>
             </div>
         </div>
     </div>
 </div>
 
+<br>
 
+
+<div class="container">
+	<div class="row justify-content-center">
+    	<div class="col-auto">
+			<div class="lamp">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="lamp-status-container">
+        <div class="lamp-status">
+          <p>This visualization of the lamp shows whether the LED cube is on or off.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -388,9 +414,26 @@ body {
     </script>
     <script>
         $(document).on("click", ".action-buttons .dropdown-menu", function(e){
-	e.stopPropagation();
-    });
+			e.stopPropagation();
+		});
     </script>
+	<script>
+$(document).ready(function(){
+	$("#1").click(function(){
+		$(".lamp").addClass("lamp-on");
+	});
+
+	$("#2").click(function(){
+		$(".lamp").removeClass("lamp-on");
+	});
+	$("#3").click(function(){
+		$(".lamp").addClass("lamp-on");
+	});
+	$("#4").click(function(){
+		$(".lamp").addClass("lamp-on");
+	});
+});
+	</script>
 
 </body>
 </html>
